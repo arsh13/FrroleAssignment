@@ -1,0 +1,20 @@
+<ng-container *ngIf="currentFolder && currentFolder.length>0; else noFolderView">
+<div class="row folder-row" *ngFor="let folder of currentFolder; let i = index">    
+    <div class="col-md-10 p-4" (click)="onClick(i, $event)">
+        {{ folder }}       
+    </div>    
+    <div class="col-md-2 p-4">
+        <span class="mr-2 float-right">
+            <app-delete-folder [id]="currentFolder[i]"></app-delete-folder>
+        </span>
+        <span class="mr-2 float-right">
+            <app-add-folder></app-add-folder>
+        </span> 
+    </div>
+</div>
+</ng-container>
+
+<ng-template #noFolderView>
+    <p>There are currently no folders inside this directory.</p>
+    <p>Click <app-add-folder></app-add-folder> to add some.</p>
+</ng-template>

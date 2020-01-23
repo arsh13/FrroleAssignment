@@ -1,0 +1,12 @@
+fa-icon{
+    color: rgba(237,239,241);
+}
+
+fa-icon:hover{
+    color: green;
+    transition: .3s;
+}
+
+a{
+    font-size: 21px;
+}

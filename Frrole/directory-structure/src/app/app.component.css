@@ -1,0 +1,16 @@
+.directory-structure:hover{
+    text-decoration: underline;
+    color: #66c2ff;
+    cursor: pointer;
+}
+
+.arrow-circle-up{
+    color: #c6c6c6;
+    font-size: 18px;
+}
+
+.arrow-circle-up:hover{
+    color: #66c2ff;
+    transition: .3s;
+    cursor: pointer;
+}

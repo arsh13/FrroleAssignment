@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <h6 class="pt-5">Welcome to The Directory Structure</h6>
+    <div class="col-md-12 alert" [ngClass]="alertType">{{message}}</div>
+  </div>
+  <div class="row mt-2 mb-2">
+    <ng-container *ngFor="let eachFolder of service.traversedDirectory; let i = index">
+      &nbsp;<a class="directory-structure" (click)="onClick(i)">{{eachFolder}}</a>&nbsp;
+      <fa-icon [icon]="faChevronRight"></fa-icon>&nbsp;
+    </ng-container>
+  </div>
+  <app-current-structure></app-current-structure>  
+  
+</div>
